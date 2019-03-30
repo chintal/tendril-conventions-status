@@ -130,4 +130,3 @@ def print_status(status):
     if not isinstance(status, Status):
         status = Status(status)
     return status.terminal_repr
-
