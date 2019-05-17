@@ -37,6 +37,7 @@ STATUS_ORDER = {
     'Discarded': (80, 'alert', Fore.RED),
     'Undefined': (90, 'alert', Fore.RED),
     'Virtual': (20, 'success', Fore.GREEN),
+    'Generator': (85, 'info', Fore.BLUE),
 }
 
 
@@ -69,7 +70,6 @@ class Status(object):
         return self._stint
 
     def __eq__(self, other):
-        # TODO Fix for thorough string handling
         if isinstance(other, str):
             return other == self._ststr
         if isinstance(other, numbers.Number):
